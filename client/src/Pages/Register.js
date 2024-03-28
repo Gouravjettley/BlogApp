@@ -21,7 +21,10 @@ const Register = () => {
       const response = await fetch('http://localhost:8000/register',{
              method:'POST',
              body:JSON.stringify({username,password}),
-             headers:{'Content-Type':'application/json'},
+              headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'true'
+        },
       });
       if(response.status == 200){
         alert("Registration Successful");
