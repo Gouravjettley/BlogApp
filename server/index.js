@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'));
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv://admin:admin@blogapp.t1v4cky.mongodb.net/BlogApp?retryWrites=true&w=majority&appName=blogapp");
 
 app.get("/",(req,res)=>{
       res.json("hello");
