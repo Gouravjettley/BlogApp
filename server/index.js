@@ -17,7 +17,7 @@ const salt = bcrypt.genSaltSync(10);
 
 
 app.use(cors({
-    origin: "https://slug-panel.onrender.com",
+    origin: "https://blog-app-client-eight.vercel.app",
     headers: ["Content-Type"],
     credentials: true,
 }));
