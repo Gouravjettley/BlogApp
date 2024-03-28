@@ -16,7 +16,13 @@ const port = process.env.PORT ;
 const salt = bcrypt.genSaltSync(10);
 
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' ,   methods:["POST","GET"] }));
+app.use(cors({
+    origin: "*",
+    headers: {
+        "Access-Control-Allow-Origin": "https://food-ordering-client-eight.vercel.app",
+        "Access-Control-Allow-Credentials": true
+    },
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'));
