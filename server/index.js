@@ -20,7 +20,7 @@ app.use(cors({
     origin: "https://blog-app-client-eight.vercel.app/",
     headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": false,
+        "Access-Control-Allow-Credentials": "true",
     },
 }));
 app.use(express.json());
