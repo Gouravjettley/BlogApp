@@ -17,13 +17,11 @@ const salt = bcrypt.genSaltSync(10);
 
 
 app.use(cors({
-    origin: "*",
-    methods:["GET","POST","PUT","DELETE"],
-    headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": "true",
-    },
+    origin: "https://slug-panel.onrender.com",
+    headers: ["Content-Type"],
+    credentials: true,
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname + '/uploads'));
