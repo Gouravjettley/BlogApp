@@ -23,7 +23,7 @@ const Register = () => {
              body:JSON.stringify({username,password}),
               headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'true'
+            'Access-Control-Allow-Origin': 'false'
         },
       });
       if(response.status == 200){
