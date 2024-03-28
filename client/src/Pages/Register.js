@@ -21,10 +21,7 @@ const Register = () => {
       const response = await fetch('https://blog-app-api-amber.vercel.app/register',{
              method:'POST',
              body:JSON.stringify({username,password}),
-              headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'true'
-        },
+             headers:{'Content-Type':'application/json'},
       });
       if(response.status == 200){
         alert("Registration Successful");
