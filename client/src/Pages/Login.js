@@ -23,7 +23,7 @@ const Login = () => {
 
   async function login(e){
       e.preventDefault();
-      const response = await fetch('http://localhost:8000/login',{
+      const response = await fetch('https://blog-app-api-amber.vercel.app/login',{
              method:'POST',
              body:JSON.stringify({username,password}),
              headers:{'Content-Type':'application/json'},
