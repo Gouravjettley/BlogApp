@@ -18,8 +18,10 @@ const salt = bcrypt.genSaltSync(10);
 
 app.use(cors({
     origin: "https://blog-app-client-eight.vercel.app",
-    headers: ["Content-Type"],
-    credentials: true,
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true
+    },
 }));
 
 app.use(express.json());
